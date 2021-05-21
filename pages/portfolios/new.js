@@ -4,19 +4,21 @@ import BasePage from "@/components/shared/BasePage";
 import withAuth from "@/hoc/withAuth";
 import PortfolioForm from "@/components/PortfolioForm";
 import { Row, Col } from "reactstrap";
-import { createPortfolio } from "@/actions/portfolios";
+import { useCreatePortfolio } from '@/actions/portfolios';
+const NewPortfolio  = ({user, loading: userLoading}) => {
+  
+  const [createPortfolio, {data, loading, error}] = useCreatePortfolio();
+  
 
-
-const NewPortfolio = ({ data, loading: UserLoading }) => {
   const _createPortfolio = (data) => {
-    alert(JSON.stringify(data));
-    createPortfolio(data);
-  };
-
+    console.log(data);
+    createPortfolio(data)
+    alert("data send")
+  }
   
   return (
     <div>
-      <BaseLayout user={data} loading={UserLoading}>
+      <BaseLayout user={user} loading={userLoading}>
         <BasePage header="Create New Portfolio">
           <Row>
             <Col md="8">
