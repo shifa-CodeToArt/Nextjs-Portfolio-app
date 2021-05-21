@@ -26,18 +26,16 @@ const BsNavLink = (props) => {
   );
 };
 
-const Header = ({ user, loading }) => {
+const Header = ({ user, loading,className }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div>
-      <Navbar
-        className="port-navbar port-default absolute"
-        color="transparent"
-        dark
-        expand="md"
-      >
+    <Navbar
+    className={`port-navbar port-default absolute ${className}`}
+    dark
+    expand="md">
         <div className="navbar-brand">
           <Link href="/">
             <a className="port-navbar-brand">Filip Jerga</a>
@@ -61,9 +59,15 @@ const Header = ({ user, loading }) => {
             <NavItem className="port-navbar-item">
               <BsNavLink href="/cv" title="Cv" />
             </NavItem>
-            <NavItem className="port-navbar-item">
+            {/*<NavItem className="port-navbar-item">
               <BsNavLink href="/secret" title="Secret" />
             </NavItem>
+            <NavItem className="port-navbar-item">
+              <BsNavLink href="/onlyadmin" title="Admin" />
+            </NavItem>
+            <NavItem className="port-navbar-item">
+              <BsNavLink href="/onlyadminssr" title="AdminSSR" />
+  </NavItem>*/}
           </Nav>
           <Nav navbar>
             {!loading && (

@@ -1,6 +1,8 @@
 @import "./shared/fonts";
 @import "./shared/index";
 @import "./components/header";
+@import "./portfolios";
+@import "./components/PortfolioCard.scss";
 
 
 .absolute {
@@ -24,9 +26,20 @@ body {
   border: none;
 }
 
-.base-page{
-  color: aliceblue;
-  padding-top: 150px;
+
+.base-page {
+  padding: 150px 0px;
+ 
+  color: black;
+  background-color: #ecedee;
+  min-height: 100vh;
+
+  .page-header-title {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
 }
 
 .base-page a{

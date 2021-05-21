@@ -4,15 +4,15 @@ import BasePage from "@/components/shared/BasePage";
 import withAuth from "@/hoc/withAuth";
 import useSWR from "swr";
 
-const Secret = ({user,loading}) => {
+const OnlyAdmin = ({user,loading}) => {
     
   return (
     <div>
       <BaseLayout user={user} loading={loading}>
-        <BasePage>Welcome to  Secret page - Hello {user.given_name} {user.family_name}</BasePage>
+        <BasePage>Welcome to  Secret page - Hello {user.name}</BasePage>
       </BaseLayout>
     </div>
   );
 };
 
-export default withAuth(Secret)();
+export default withAuth(OnlyAdmin)('admin');
