@@ -2,6 +2,7 @@ import BaseLayout from "@/components/layouts/BaseLayout";
 import BasePage from "@/components/shared/BasePage";
 import { useRouter } from "next/router";
 import { useGetUser } from "@/actions/user";
+
 import PortfolioApi from "@/lib/api/portfolios";
 const Portfolio = ({ portfolio }) => {
   const router = useRouter();

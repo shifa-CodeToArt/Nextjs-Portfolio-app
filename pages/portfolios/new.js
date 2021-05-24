@@ -5,16 +5,21 @@ import withAuth from "@/hoc/withAuth";
 import PortfolioForm from "@/components/PortfolioForm";
 import { Row, Col } from "reactstrap";
 import { useCreatePortfolio } from '@/actions/portfolios';
+import Redirect from "@/components/shared/Redirect";
+import {toast} from 'react-toastify';
+
 const NewPortfolio  = ({user, loading: userLoading}) => {
-  
-  const [createPortfolio, {data, loading, error}] = useCreatePortfolio();
-  
+const [createPortfolio, {data, loading, error}] = useCreatePortfolio();
 
   const _createPortfolio = (data) => {
-    console.log(data);
     createPortfolio(data)
-    alert("data send")
+    toast.success("Portfolio has Updated Successfully",{autoClose:2000}); 
   }
+
+  if(data){
+    return <Redirect to="/portfolios"/>
+  }
+  
   
   return (
     <div>
@@ -23,6 +28,7 @@ const NewPortfolio  = ({user, loading: userLoading}) => {
           <Row>
             <Col md="8">
               <PortfolioForm onSubmit={_createPortfolio} />
+              {error && <div className="alert alert-danger mt-2">{error}</div>}
             </Col>
           </Row>
         </BasePage>
