@@ -11,6 +11,7 @@
     "@auth0/nextjs-auth0": "^0.11.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
+    "moment": "^2.29.1",
     "next": "10.2.0",
     "node-sass": "^4.14.1",
     "react": "17.0.2",
@@ -21,6 +22,7 @@
     "react-toastify": "^7.0.4",
     "react-typed": "^1.2.0",
     "reactstrap": "^8.9.0",
+    "slate-simple-editor": "git+https://github.com/Jerga99/slate-simple-editor.git",
     "swr": "^0.5.6",
     "tslib": "^2.2.0"
   }

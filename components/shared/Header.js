@@ -72,7 +72,7 @@ const Header = ({ user, loading,className }) => {
           <DropdownItem>
           <BsNavLink
             className="port-dropdown-item"
-            href="/blogs/dashboard"
+            href="/dashboard"
             title="Dashboard"
           />
         </DropdownItem>
