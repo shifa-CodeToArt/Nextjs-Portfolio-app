@@ -22,7 +22,7 @@ const EditPortfolio = ({ user }) => {
    }
   };
   return (
-    <BaseLayout user={user} loading={false}>
+    <BaseLayout  title="Edit Portfolios -ShifaShaikh" user={user} loading={false}>
       <BasePage header="Edit Portfolio">
         <Row>
           <Col md="8">

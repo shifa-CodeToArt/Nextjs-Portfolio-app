@@ -25,7 +25,9 @@ const Portfolios = ({ portfolios: initailPortfolios }) => {
   }
   return (
     <>
-      <BaseLayout user={dataUser} loading={loadingUser}>
+      <BaseLayout title="Portfolio Page-ShifaShaikh" 
+      metaDescription="A portfolio is a collection of financial investments like stocks, bonds, commodities, cash, and cash equivalents, including closed-end funds and exchange traded funds (ETFs)"
+      user={dataUser} loading={loadingUser}>
         <BasePage header="Portfolios" className="portfolio-page">
           <Row>
             {portfolios.map((portfolio) => (

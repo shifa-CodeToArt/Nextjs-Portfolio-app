@@ -13,6 +13,7 @@ const blogs = ({blogs}) => {
   return (
      
     <BaseLayout
+    metaDescription="A blog is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page."
     navClass="transparent" className="blog-listing-page"
     user={data} loading={loading}>
     <Masthead imagePath="/images/home-bg.jpg">

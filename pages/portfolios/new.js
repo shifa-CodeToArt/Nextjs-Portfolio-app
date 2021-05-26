@@ -23,7 +23,7 @@ const [createPortfolio, {data, loading, error}] = useCreatePortfolio();
   
   return (
     <div>
-      <BaseLayout user={user} loading={userLoading}>
+      <BaseLayout  title="Newest Portfolios -ShifaShaikh" user={user} loading={userLoading}>
         <BasePage header="Create New Portfolio">
           <Row>
             <Col md="8">
